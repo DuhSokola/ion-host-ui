@@ -7,6 +7,40 @@ var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var sh = require('shelljs');
 
+
+/**
+ * Dependency Injection
+ */
+var inject = require('gulp-inject'),
+  wiredep = require('wiredep');
+
+gulp.task('injectBower', function () {
+  wiredep({
+    src: './www/index.html',
+    directory: './www/lib/',
+    bowerJson: require('./bower.json'),
+    devDependencies: false
+  });
+});
+gulp.task('injectSources', function () {
+  var target = gulp.src('./www/index.html');
+
+  return target.pipe(inject(gulp.src(
+    [
+      'js/**/*.js',
+      '**/*.css',
+      '!lib/**/*.css',
+      '!lib/**/*.js'
+    ],
+    {
+      read: false,
+      cwd: 'www'
+    })
+  )).pipe(gulp.dest('./www'));
+});
+
+
+
 var paths = {
   sass: ['./scss/**/*.scss']
 };
