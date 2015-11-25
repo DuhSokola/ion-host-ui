@@ -27,7 +27,7 @@ app.run(function ($ionicPlatform) {
 app.config(function ($translateProvider) {
   $translateProvider.translations('de', {
     "TITLE" : "CH",
-    "HOST_LABEL" : "Erfassende Person",
+    "USER_LABEL" : "Erfassende Person",
     "BRAND_SELECT_LABEL":"Marke",
     "CAMPAIGN_SELECT_LABEL":"Kampagne",
     "CAR_AUDI_SELECT":"Audi",
@@ -42,3 +42,19 @@ app.config(function ($translateProvider) {
   });
   $translateProvider.preferredLanguage('de');
 });
+
+/**
+ * Example to switch language
+ */
+app.controller('MainCtrl',['$scope', function($scope){
+  $scope.globals = {};
+  $scope.globals.hostData = undefined;
+  $scope.globals.cutomerData = undefined;
+
+  $scope.globals.printAllGlobals = function() {
+    console.log('---===START GLOBALS===---');
+    console.log($scope.globals.hostData);
+    console.log($scope.globals.cutomerData);
+    console.log('---===END GLOBALS===---');
+  }
+}]);

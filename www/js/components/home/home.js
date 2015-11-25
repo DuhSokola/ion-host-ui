@@ -2,6 +2,7 @@
     'use strict';
 
     var deps = [
+      'app.home.ctrl'
     ];
 
     var home = angular.module('app.home',deps);
