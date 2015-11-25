@@ -1,86 +1,41 @@
 <!DOCTYPE html>
-<html ng-app="starter">
-<head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
 
-  <title></title>
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
-  <!-- cordova script (this will be a 404 during development) -->
-  <script src="cordova.js"></script>
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
 
-  <!-- bower:css -->
-  <link rel="stylesheet" href="externals/bower_components/bootstrap/dist/css/bootstrap.css" />
-  <link rel="stylesheet" href="externals/bower_components/ui-select/dist/select.css" />
-  <link rel="stylesheet" href="externals/bower_components/ionic/css/ionic.css" />
-  <!-- endbower -->
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
 
-  <!-- inject:css -->
-  <link rel="stylesheet" href="/assets/style/css/main.css">
-  <!-- endinject -->
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
 
-  <!--DO NOT REMOVE THIS LINE-->
-  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.8.5/css/selectize.bootstrap3.css">
-</head>
-<body >
-
-<div class="container" id="container" ng-controller="hostAppCtrl">
-
-  <ion-nav-view></ion-nav-view>
-
-</div>
-
-
-  <!-- bower:js -->
-  <script src="externals/bower_components/jquery/dist/jquery.js"></script>
-  <script src="externals/bower_components/angular/angular.js"></script>
-  <script src="externals/bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
-  <script src="externals/bower_components/angular-resource/angular-resource.js"></script>
-  <script src="externals/bower_components/angular-sanitize/angular-sanitize.js"></script>
-  <script src="externals/bower_components/angular-translate/angular-translate.js"></script>
-  <script src="externals/bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
-  <script src="externals/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-  <script src="externals/bower_components/bootstrap/dist/js/bootstrap.js"></script>
-  <script src="externals/bower_components/jquery-ui/jquery-ui.js"></script>
-  <script src="externals/bower_components/underscore/underscore.js"></script>
-  <script src="externals/bower_components/ui-select/dist/select.js"></script>
-  <script src="externals/bower_components/angular-animate/angular-animate.js"></script>
-  <script src="externals/bower_components/ionic/js/ionic.js"></script>
-  <script src="externals/bower_components/ionic/js/ionic-angular.js"></script>
-  <!-- endbower -->
-
-  <!-- inject:js -->
-  <script src="/app/app.constants.js"></script>
-  <script src="/app/app.module.js"></script>
-  <script src="/app/app.routes.js"></script>
-  <script src="/app/components/catalog/catalog.js"></script>
-  <script src="/app/components/catalog/catalogCtrl.js"></script>
-  <script src="/app/components/catalog/catalogDirective.js"></script>
-  <script src="/app/components/customer/customer.js"></script>
-  <script src="/app/components/customer/customerCtrl.js"></script>
-  <script src="/app/components/customer/customerDirective.js"></script>
-  <script src="/app/components/footer/footer.js"></script>
-  <script src="/app/components/footer/footerCtrl.js"></script>
-  <script src="/app/components/footer/footerDirective.js"></script>
-  <script src="/app/components/header/header.js"></script>
-  <script src="/app/components/header/headerCtrl.js"></script>
-  <script src="/app/components/header/headerDirective.js"></script>
-  <script src="/app/components/home/home.js"></script>
-  <script src="/app/components/home/homeCtrl.js"></script>
-  <script src="/app/components/home/homeDirective.js"></script>
-  <script src="/app/components/search/search.js"></script>
-  <script src="/app/components/search/searchCtrl.js"></script>
-  <script src="/app/components/search/searchDirective.js"></script>
-  <script src="/app/shared/factories/someFactory.js"></script>
-  <script src="/app/shared/providers/someProvider.js"></script>
-  <script src="/app/shared/services/someService.js"></script>
-  <script src="/app/shared/resources/customerResource.js"></script>
-  <script src="/assets/i18n/app.translation.de.js"></script>
-  <script src="/assets/i18n/app.translation.en.js"></script>
-  <script src="/assets/i18n/app.translation.fr.js"></script>
-  <script src="/assets/i18n/app.translation.it.js"></script>
-  <!-- endinject -->
-
-</body>
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
+  </head>
+  <body ng-app="starter">
+    <!--
+      The nav bar that will be updated as we navigate between views.
+    -->
+    <ion-nav-bar class="bar-stable">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+    </ion-nav-bar>
+    <!--
+      The views will be rendered in the <ion-nav-view> directive below
+      Templates are in the /templates folder (but you could also
+      have templates inline in this html file if you'd like).
+    -->
+    <ion-nav-view></ion-nav-view>
+  </body>
 </html>
