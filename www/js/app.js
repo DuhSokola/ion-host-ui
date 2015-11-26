@@ -26,19 +26,21 @@ app.run(function ($ionicPlatform) {
 
 app.config(function ($translateProvider) {
   $translateProvider.translations('de', {
-    "TITLE" : "CH",
-    "USER_LABEL" : "Erfassende Person",
-    "BRAND_SELECT_LABEL":"Marke",
-    "CAMPAIGN_SELECT_LABEL":"Kampagne",
-    "CAR_AUDI_SELECT":"Audi",
-    "CAR_SEAT_SELECT":"Seat",
-    "CAR_SKODA_SELECT":"Skoda",
-    "CAR_VW_SELECT":"Volkswagen",
-    "CAMPAIGN_GENEVA_SELECT":"Autosalon Genf 2016",
-    "CAMPAIGN_ZURICH_SELECT":"Autosalon Zürich 2016",
-    "ERROR_LOGIN_HOSTNAME_EMPTY":"Erfassende Person wurde nicht definiert",
-    "ERROR_LOGIN_CARBRAND_EMPTY":"Marke wurde nicht definiert",
-    "ERROR_LOGIN_CAMPAIGN_EMPTY":"Kampaigne wurde nicht definiert"
+    "GLOBAL_TITLE" : "CH",
+    "LOGIN_INPUT_LABEL_USER" : "Erfassende Person",
+    "LOGIN_SELECT_LABEL_BRAND":"Marke",
+    "LOGIN_SELECT_LABEL_CAMPAIGN":"Kampagne",
+    "LOGIN_SELECT_OPTION_CAR_AUDI":"Audi",
+    "LOGIN_SELECT_OPTION_CAR_SEAT":"Seat",
+    "LOGIN_SELECT_OPTION_CAR_SKODA":"Skoda",
+    "LOGIN_SELECT_OPTION_CAR_VW":"Volkswagen",
+    "LOGIN_SELECT_OPTION_CAMPAIGN_GENEVA":"Autosalon Genf 2016",
+    "LOGIN_SELECT_OPTION_CAMPAIGN_ZURICH":"Autosalon Zürich 2016",
+    "LOGIN_INPUT_SUBMIT":"Einloggen",
+    "LOGIN_ERROR_FILL_ALL_FIELDS" : "Bitte alle Felder ausfüllen",
+    "ORDER_TEXT_TESTDRIVE":"Probefahrt bestellen",
+    "ORDER_TEXT_TESTDRIVE_AND_CATALOG":"Probefahrt und Katalog bestellen",
+    "ORDER_TEXT_CATALOG":"Katalog bestellen"
   });
   $translateProvider.preferredLanguage('de');
 });

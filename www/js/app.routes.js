@@ -3,7 +3,7 @@
 
     var deps = [
         'app.home',
-        'app.catalog'
+        'app.order'
     ];
 
     var route = angular.module('app.routes',deps);
@@ -15,11 +15,16 @@
             .state('home', {
                 url: '/home',
                 templateUrl: 'js/components/home/_home.html',
-                controller: ''
+                controller: 'HomeCtrl'
             })
-            .state('catalog', {
-                url: '/catalog',
-                templateUrl: 'js/components/catalog/_catalog.html',
+            .state('order', {
+                url: '/order',
+                templateUrl: 'js/components/order/_order.html',
+                controller: 'OrderCtrl'
+            })
+            .state('order.select', {
+                url: '/order/select',
+                templateUrl: 'js/components/order/_order.select.html',
                 controller: ''
             });
     });

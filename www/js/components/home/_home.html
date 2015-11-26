@@ -1,39 +1,33 @@
-<ion-view view-title="My Page">
+<ion-view view-title="LoginPage">
   <ion-content>
     <form name="loginForm" ng-submit="submit()" autocomplete="off" ng-controller="LoginCtrl">
 
       <div class="list list-inset">
 
-        <div class="item bar bar-header bar-assertive">
-          <h1 class="title">ERROR PLACE</h1>
+        <div class="item bar bar-header bar-assertive" ng-show="formIsSubmitted && (!hostName || !selectedCarBrand || !selectedCampaign)">
+          <h1 class="title" translate="LOGIN_ERROR_FILL_ALL_FIELDS"></h1>
         </div>
 
         <label class="item item-input item-stacked-label">
-          <span class="input-label" translate="USER_LABEL"></span>
+          <span class="input-label" translate="LOGIN_INPUT_LABEL_USER"></span>
           <input type="text" ng-model="hostName" placeholder="Max Muster">
         </label>
 
         <label class="item item-input item-select">
-          <div class="input-label" translate="BRAND_SELECT_LABEL"></div>
-          <select ng-model="selectedCarBrand">
-            <option ng-repeat="carBrand in carBrands" value="{{carBrand.id}}">
-              {{carBrand.name}}
-            </option>
+          <div class="input-label" translate="LOGIN_SELECT_LABEL_BRAND"></div>
+          <select ng-model="selectedCarBrand" ng-options="carBrand.name for carBrand in carBrands">
           </select>
         </label>
 
         <label class="item item-input item-select">
-          <div class="input-label" translate="CAMPAIGN_SELECT_LABEL">
+          <div class="input-label" translate="LOGIN_SELECT_LABEL_CAMPAIGN">
           </div>
-          <select ng-model="selectedCampaign">
-            <option>Blue</option>
-            <option selected>Green</option>
-            <option>Red</option>
+          <select ng-model="selectedCampaign" ng-options="campaign.name for campaign in campaigns">
           </select>
         </label>
 
         <div class="padding">
-          <button type="submit" class="button button-block button-positive">Create Task</button>
+          <button type="submit" class="button button-block button-positive" translate="LOGIN_INPUT_SUBMIT">Create Task</button>
         </div>
 
       </div>
