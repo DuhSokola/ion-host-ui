@@ -9,7 +9,7 @@
     var route = angular.module('app.routes',deps);
 
     route.config(function($stateProvider, $urlRouterProvider){
-        $urlRouterProvider.otherwise('/home');
+        $urlRouterProvider.otherwise('/order');
 
         $stateProvider
             .state('home', {
@@ -22,10 +22,10 @@
                 templateUrl: 'js/components/order/_order.html',
                 controller: 'OrderCtrl'
             })
-            .state('order.select', {
-                url: '/order/select',
+            .state('order/select', {
+                url: '/order/select/:selected',
                 templateUrl: 'js/components/order/_order.select.html',
-                controller: ''
+                controller: 'OrderSelectCtrl'
             });
     });
 

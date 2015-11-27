@@ -40,7 +40,10 @@ app.config(function ($translateProvider) {
     "LOGIN_ERROR_FILL_ALL_FIELDS" : "Bitte alle Felder ausfüllen",
     "ORDER_TEXT_TESTDRIVE":"Probefahrt bestellen",
     "ORDER_TEXT_TESTDRIVE_AND_CATALOG":"Probefahrt und Katalog bestellen",
-    "ORDER_TEXT_CATALOG":"Katalog bestellen"
+    "ORDER_TEXT_CATALOG":"Katalog bestellen",
+    "ORDER_SELECT_CHECKBUTTON_TEXT_TESTDRIVE":"Probefahrt",
+    "ORDER_SELECT_CHECKBUTTON_TEXT_CATALOG":"Katalog",
+    "ORDER_ERROR_NO_SELECT":"Mind. eine Auswahl muss getroffen werden"
   });
   $translateProvider.preferredLanguage('de');
 });
